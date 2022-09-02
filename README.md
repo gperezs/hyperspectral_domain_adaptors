@@ -5,6 +5,7 @@ PyTorch code for training and evaluation of the hyperspectral domain adaptors fo
 ## Table of contents
 * [Getting started](#getting-started)
 * [Datasets](#datasets)
+* [Demo](#demo)
 * [Oracle fine-tuning](#oracle-fine-tuning-with-imagenet-pre-trained-vgg-d)
 * [Pre-training adaptors](#pre-training-adaptors)
 * [Fine-tuning models for hyperspectral datasets](#fine-tuning-models-for-hyperspectral-datasets)
@@ -87,6 +88,25 @@ To get started download datasets listed below. Add each dataset directory where 
 * Legacy ExtraGalactic UV Survey (4 classes): [LEGUS dataset](https://archive.stsci.edu/prepds/legus/).
 * So2Sat LCZ42 (17 classes): [So2Sat LCZ42 dataset](https://mediatum.ub.tum.de/1483140). 
 * EuroSAT (10 classes): [EuroSAT dataset (13 bands)](http://madm.dfki.de/downloads).
+
+## Demo
+
+We have created a demo with EuroSAT dataset and multi-view linear adaptors for VGG16, ResNet18, and ResNet50. Please refer to `demo/eurosat.py` folder for the sample dataloader and `demo/mvcnn.py` for the multi-view linear adaptor. You can change hyper-parameters, backbone architecture, and number of views in `demo/demo.sh`:
+
+```
+CUDA_VISIBLE_DEVICES=0 python train.py \
+                        --batch-size 64 \
+                        --epochs 30\
+                        --lr 1e-4 \
+                        --backbone vgg16 \
+                        --num_views 5 \
+```
+
+To run demo:
+```
+cd demo
+bash demo.sh
+```
 
 ## Oracle fine-tuning with ImageNet pre-trained VGG-D
 

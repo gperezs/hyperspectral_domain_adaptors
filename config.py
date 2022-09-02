@@ -5,7 +5,7 @@ dset_root['cub'] = '/scratch2/gperezsarabi/datasets/CUB_200_2011'
 dset_root['cars'] = '/scratch2/gperezsarabi/datasets/CARS'
 dset_root['aircrafts'] = '/scratch2/gperezsarabi/datasets/fgvc-aircraft-2013b'
 dset_root['legus'] = '/scratch2/gperezsarabi/datasets/LEGUS'
-dset_root['eurosat'] = '/scratch2/gperezsarabi/datasets/EuroSAT'
+dset_root['eurosat'] = '/home/gaperezs/UMass/Research/datasets/EuroSAT'
 dset_root['so2sa'] = '/scratch2/gperezsarabi/datasets/So2Sa_LCZ42'
 
 # means and stds 
