@@ -3,8 +3,8 @@
 # This demo is prepared for EuroSAT dataset (http://madm.dfki.de/downloads).
 
 CUDA_VISIBLE_DEVICES=0 python train.py \
-                        --batch-size 64 \
-                        --epochs 30\
+                        --batch-size 32 \
+                        --epochs 1 \
                         --lr 1e-4 \
                         --backbone vgg16 \
                         --num_views 5 \

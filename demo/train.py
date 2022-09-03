@@ -209,7 +209,7 @@ if __name__ == '__main__':
             train_accuracy, train_loss = train(epoch, train_loader, log_name)
             
             # LR schedule:
-            if epoch%lre == 0 and args.lr > 1e-6:
+            if epoch%args.lre == 0 and args.lr > 1e-6:
                 args.lr *= 0.1
                 if args.backbone == 'vgg16':
                     params = []
